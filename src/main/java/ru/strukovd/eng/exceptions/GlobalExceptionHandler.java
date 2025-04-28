@@ -37,28 +37,3 @@ public class GlobalExceptionHandler {
         return new ResponseEntity<>(body, HttpStatus.BAD_REQUEST);
     }
 }
-
-//@ControllerAdvice
-//public class GlobalExceptionHandler {
-//
-//    @ExceptionHandler(MethodArgumentNotValidException.class)
-//    public ResponseEntity<ValidationErrorResponse> handleValidationExceptions(
-//            MethodArgumentNotValidException ex,
-//            HttpServletRequest request) {
-//
-//        List<String> errors = ex.getBindingResult()
-//                .getAllErrors()
-//                .stream()
-//                .map(DefaultMessageSourceResolvable::getDefaultMessage)
-//                .collect(Collectors.toList());
-//
-//        ValidationErrorResponse response = new ValidationErrorResponse(
-//                LocalDateTime.now(),
-//                HttpStatus.BAD_REQUEST.value(),
-//                errors,
-//                request.getRequestURI()
-//        );
-//
-//        return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
-//    }
-//}
