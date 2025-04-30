@@ -41,7 +41,7 @@ spring:
 
 ---
 spring:
-  config:
+  config:*
     activate:
       on-profile: dev
   datasource:
@@ -61,9 +61,9 @@ spring:
     activate:
       on-profile: prod
   datasource:
-    url: jdbc:postgresql://localhost:5432/english_db_prod
-    username: english_prod
-    password: prod_password
+    url: jdbc:postgresql://localhost:5432/english_db
+    username: english
+    password: english
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
