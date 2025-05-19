@@ -1,12 +1,12 @@
 package ru.strukovd.eng.entities;
 
 import jakarta.persistence.*;
-
+import lombok.Data;
 import java.time.LocalDateTime;
-import java.util.Map;
 
 @Entity
 @Table(name = "words")
+@Data
 public class WordEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
